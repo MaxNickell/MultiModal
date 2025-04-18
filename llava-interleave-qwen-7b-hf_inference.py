@@ -4,7 +4,6 @@ from PIL import Image
 from transformers import AutoProcessor, LlavaForConditionalGeneration
 import torch
 
-# Model config
 model_id = "llava-hf/llava-interleave-qwen-7b-hf"
 processor = AutoProcessor.from_pretrained(model_id)
 model = LlavaForConditionalGeneration.from_pretrained(
@@ -13,13 +12,11 @@ model = LlavaForConditionalGeneration.from_pretrained(
     device_map="auto"
 )
 
-# Paths
 image_dir = os.path.expanduser("~/git/VICE/out/images")
 queries_path = os.path.expanduser("~/git/VICE/data/dev_queries.json")
 output_path = "llava-interleave-qwen-7b-hf_results.json"
 max_new_tokens = 256
 
-# Load query file
 with open(queries_path, "r") as f:
     queries = json.load(f)
 
@@ -36,17 +33,14 @@ for identifier, query in queries.items():
     image0 = Image.open(img0_path).convert("RGB")
     image1 = Image.open(img1_path).convert("RGB")
 
-    # 🔥 Prompt follows official formatting
     prompt = f"<|im_start|>user <image><image>\n{query}|im_end|><|im_start|>assistant"
 
-    # Encode text + images
     inputs = processor(
         text=prompt,
         images=[image0, image1],
         return_tensors="pt"
     ).to(model.device)
 
-    # Generate response
     output_ids = model.generate(
         **inputs,
         max_new_tokens=max_new_tokens,
@@ -66,7 +60,6 @@ for identifier, query in queries.items():
     print(f"A: {response}")
     print("-" * 50)
 
-# Save to JSON
 with open(output_path, "w") as f:
     json.dump(
         {identifier: {"question": q, "answer": a} for identifier, q, a in results},
@@ -75,4 +68,3 @@ with open(output_path, "w") as f:
     )
 
 print(f"\n✅ Finished processing {len(results)} image pairs.")
-print(f"📝 Results saved to: {output_path}")
