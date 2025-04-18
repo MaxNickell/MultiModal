@@ -1,0 +1,142 @@
+{
+  "dev-1043-0": {
+    "question": "What is similar about these two images?",
+    "answer": "wine"
+  },
+  "dev-666-1": {
+    "question": "What is different about these two padlocks?",
+    "answer": "color"
+  },
+  "dev-640-1": {
+    "question": "What is different about these two drum sets?",
+    "answer": "color"
+  },
+  "dev-594-3": {
+    "question": "Which perfume is more expensive?",
+    "answer": "left"
+  },
+  "dev-582-3": {
+    "question": "Which flute is unlike the others?",
+    "answer": "right"
+  },
+  "dev-518-0": {
+    "question": "What is different about these two dogs?",
+    "answer": "color"
+  },
+  "dev-516-0": {
+    "question": "Which crab is closest to being eaten?",
+    "answer": "lobster"
+  },
+  "dev-512-3": {
+    "question": "What is different about these bookcases?",
+    "answer": "nothing"
+  },
+  "dev-505-2": {
+    "question": "What is similar about these two images?",
+    "answer": "animals"
+  },
+  "dev-504-2": {
+    "question": "Which dog did something wrong?",
+    "answer": "neither"
+  },
+  "dev-480-0": {
+    "question": "What is similar about the drawings on the golf balls?",
+    "answer": "face"
+  },
+  "dev-476-3": {
+    "question": "Which object is in common in both images",
+    "answer": "vase"
+  },
+  "dev-473-3": {
+    "question": "What is similar about these two water buffalos?",
+    "answer": "color"
+  },
+  "dev-471-3": {
+    "question": "What is different about these two stairways?",
+    "answer": "shape"
+  },
+  "dev-471-1": {
+    "question": "What is similar about these two stairways?",
+    "answer": "shape"
+  },
+  "dev-464-2": {
+    "question": "Which dog is not like the others?",
+    "answer": "left"
+  },
+  "dev-442-3": {
+    "question": "Which pizza is more popular?",
+    "answer": "cheese"
+  },
+  "dev-400-0": {
+    "question": "What object is not like the others?",
+    "answer": "balloon"
+  },
+  "dev-373-0": {
+    "question": "Which image depicts a university graduate?",
+    "answer": "top left"
+  },
+  "dev-364-0": {
+    "question": "Which of these two wines is more popular in the United States?",
+    "answer": "wine"
+  },
+  "dev-353-0": {
+    "question": "What is similar about these two couches?",
+    "answer": "yes"
+  },
+  "dev-350-2": {
+    "question": "What do these two italian greyhounds have in common?",
+    "answer": "color"
+  },
+  "dev-342-0": {
+    "question": "What is the difference between these two Chihuahuas?",
+    "answer": "color"
+  },
+  "dev-339-3": {
+    "question": "What is in common between the actions of the two men?",
+    "answer": "face"
+  },
+  "dev-339-2": {
+    "question": "Which man is doing a seated dumbbell shoulder press?",
+    "answer": "left"
+  },
+  "dev-328-2": {
+    "question": "What is the differnce between these two trains?",
+    "answer": "2"
+  },
+  "dev-299-1": {
+    "question": "What is different about these water bottles?",
+    "answer": "color"
+  },
+  "dev-293-0": {
+    "question": "What is the difference between these two groups of pugs?",
+    "answer": "size"
+  },
+  "dev-278-2": {
+    "question": "Which golf ball has a lucky symbol?",
+    "answer": "middle"
+  },
+  "dev-274-3": {
+    "question": "Which animal breed typically weighs more?",
+    "answer": "dog"
+  },
+  "dev-63-2": {
+    "question": "Which material is in common in both images?",
+    "answer": "wood"
+  },
+  "dev-58-3": {
+    "question": "Which product is designed to treat dry skin?",
+    "answer": "toothpaste"
+  },
+  "dev-58-2": {
+    "question": "Which products are used to clean the body?",
+    "answer": "soap"
+  },
+  "dev-43-3": {
+    "question": "What is similar about these two crafts?",
+    "answer": "yarn"
+  },
+  "dev-15-2": {
+    "question": "What is the difference between why these groups of women are wearing bikinis?",
+    "answer": "color"
+  }
+}
