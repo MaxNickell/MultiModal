@@ -1,19 +1,30 @@
 import os
 import json
 from PIL import Image
-from transformers import AutoProcessor, Llama4ForConditionalGeneration
+from transformers import AutoProcessor, Llama4ForConditionalGeneration, BitsAndBytesConfig
 import torch
-import torch._dynamo
-    
-torch._dynamo.config.suppress_errors = True
 
+bnb_config = BitsAndBytesConfig(
+    load_in_8bit=True
+)
 
 model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
 processor = AutoProcessor.from_pretrained(model_id)
 model = Llama4ForConditionalGeneration.from_pretrained(
     model_id,
-    device_map="auto",
     torch_dtype=torch.bfloat16,
+    quantization_config=bnb_config,
+    device_map="auto",
+    max_memory={
+        0: "22GiB",
+        1: "22GiB",
+        2: "22GiB",
+        3: "22GiB",
+        4: "22GiB",
+        5: "22GiB",
+        6: "22GiB",
+        7: "22GiB",
+    },
 )
 
 image_dir = os.path.expanduser("~/git/VICE/out/images")
