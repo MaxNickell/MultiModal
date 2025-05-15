@@ -1,3 +1,4 @@
+# TOO BIG TO RUN ON LAB SERVERS
 import os
 import json
 from PIL import Image
@@ -5,26 +6,18 @@ from transformers import AutoProcessor, Llama4ForConditionalGeneration, BitsAndB
 import torch
 
 bnb_config = BitsAndBytesConfig(
-    load_in_8bit=True
+    load_in_8bit=True,
+    llm_int8_enable_fp32_cpu_offload=True,
 )
 
 model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
 processor = AutoProcessor.from_pretrained(model_id)
 model = Llama4ForConditionalGeneration.from_pretrained(
     model_id,
-    torch_dtype=torch.bfloat16,
     quantization_config=bnb_config,
+    attn_implementation="flex_attention",
     device_map="auto",
-    max_memory={
-        0: "22GiB",
-        1: "22GiB",
-        2: "22GiB",
-        3: "22GiB",
-        4: "22GiB",
-        5: "22GiB",
-        6: "22GiB",
-        7: "22GiB",
-    },
+    torch_dtype="auto"
 )
 
 image_dir = os.path.expanduser("~/git/VICE/out/images")
